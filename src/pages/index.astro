@@ -1,0 +1,65 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Anime from '../components/Anime.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+        <div class="side">
+		<Header title={SITE_TITLE} />
+        <Anime />
+        </div>
+		<main>
+			<h1>🌎 Hello World!</h1>
+			<p>
+        Hello! I am Cayle, an aspiring software engineer from Pampanga, Philippines.
+		</p>
+			<p>
+                This year, I would like to contribute to more open source projects. I am interested in discord bot, cli, web development. Currently learning rust.
+			</p>
+            <p>I use neovim for code editing, i3 as my window manager and... I use arch btw.</p>
+            <p>
+                I started learning programming since I was 13, but I was inconsistent because of distraction, lack of motivation and procastination. This year, I am turning 15 and I have learned alot about programming. I can now build full stack web applications, discord bots and cli tools.
+            </p>
+			<p>Tech Stack (ranked based on experience):</p>
+			<ul>
+                <li>Javascript/Typescript</li>
+                <li>ReactJS</li>
+                <li>Rust</li>
+			</ul>
+            <p>Recent Projects:</p>
+			<ul>
+                <li><a href="https://github.com/itsmyvim/itsmyvim">itsmyvim</a> - a tool to share your neovim plugins and keymappings with just a few simple steps.</li>
+                <li><a href="https://github.com/caycun/termongo">termongo</a> - a cli tool to view your mongodb data in a tui.</li>
+                <li><a href="https://github.com/caycun/rubitimer">rubitimer</a> - my first project in rust</li>
+			</ul>
+				<Footer />
+		</main>
+	</body>
+</html>
+<style>
+body {
+    display: flex;
+}
+main {
+    flex: 2;
+    margin: 10px;
+}
+.side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    height: 200px;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+}
+</style>
